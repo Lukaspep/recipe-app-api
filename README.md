@@ -37,7 +37,7 @@ The Recipe App API is a project built with Django Rest Framework (DRF) that prov
    ```bash
    docker-compose run --rm app sh -c "python manage.py migrate"
 
-5.Start the server:
+5. Start the server:
 
   ```bash
   docker-compose up
