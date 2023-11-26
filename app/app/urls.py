@@ -19,9 +19,14 @@ from drf_spectacular.views import (
 )
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
+from django.conf import settings
+from .views import redirect_to_swagger, default_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', default_view, name='default_view'),
+    path('redirect-to-swagger/', redirect_to_swagger, name='redirect_to_swagger'),
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path(
         'api/docs/',
@@ -29,5 +34,10 @@ urlpatterns = [
         name='api-docs',
     ),
     path('api/user/', include('user.urls')),
+    path('api/recipe/', include('recipe.urls')),
 
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT,)
