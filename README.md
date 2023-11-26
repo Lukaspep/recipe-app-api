@@ -42,8 +42,8 @@ The Recipe App API is a project built with Django Rest Framework (DRF) that prov
   ```bash
   docker-compose up
 
-The API will be available at http://127.0.0.1:8000/.
-```
+  The API will be available at http://127.0.0.1:8000/.
+  ```
 Usage
 Access the Swagger documentation to explore and test the API: http://127.0.0.1:8000/api/docs/
 
