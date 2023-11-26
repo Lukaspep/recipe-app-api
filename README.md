@@ -49,8 +49,8 @@ Access the Swagger documentation to explore and test the API: http://127.0.0.1:8
 
 You can also access the Django Rest Framework API documentation at: http://127.0.0.1:8000/api/schema/
 
-Contributions
+
 Contributions are welcome! If you find bugs or have ideas to improve the project, please open an issue or submit a pull request.
 
-License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
